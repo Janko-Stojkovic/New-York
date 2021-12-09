@@ -185,7 +185,7 @@
                             </div>
                         </div>
                         <div class="card " >
-                            <img class="card-img-top" src="assets/images/Oculus.jpeg" alt="Card image cap">
+                            <img class="card-img-top" src="assets/images/oculus.jpeg" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">The Oculus</h5>
                               <p class="card-text">The Oculus is the world’s most expensive train station, serving 12 subway lines and the PATH train, with a beautiful mall inside of it.</p>
@@ -296,25 +296,23 @@
                                         <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
 
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Example: John Doe">
-                                        <i class="fas fa-exclamation-circle failure-icon"></i>
-                                        <i class="fas fa-check-circle success-icon"></i>
-                                        <div class="error"></div>
+                                        
+                                        <div class="errorName"></div>
                                     </div>
 
                                     <div class="col-lg-6 col-6 bx">
                                         <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
 
                                         <input type="email" name="email" id="email" class="form-control" placeholder="Example:john.doe@gmail.com">
-                                        <i class="fas fa-exclamation-circle failure-icon"></i>
-                                        <i class="fas fa-check-circle success-icon"></i>
-                                        <div class="errorName"></div>
+                                        
+                                        <div class="errorEmail"></div>
                                     </div>
 
                                     <div class="col-12 my-4">
                                         <label for="message" class="form-label">How can we help?</label>
 
                                         <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tell us something more about NYC" ></textarea>
-                                        
+                                        <div class="errorMsg"></div>
                                     </div>
 
                                     <div class="col-12">
@@ -348,9 +346,8 @@
 
                                 <div class="col-lg-5 col-12 mx-auto mt-5 bt">
                                     
-                                        <input type="button" id="btnSubmitForm" name="btnSubmitForm" value="Send Message">
+                                    <input type="button" id="btnSubmitForm" name="btnSubmitForm" value="Send Message">
                                     
-                                   
                                 </div>
                             </form>
                         </div>

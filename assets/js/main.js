@@ -57,16 +57,20 @@ var noErrors;
 formName.addEventListener("blur", checkName);
 function checkName() {
   var check = nameRegex.test(formName.value);
+  var errorName =  document.querySelector(".errorName");
   if(check) {
     formName.classList.add("br-green");
     formName.classList.remove("br-red");
+    errorName.innerHTML="Name is valid!";
+    errorName.style.color="green";
  
  } 
  else {
   noErrors = false;
   formName.classList.add("br-red");
   formName.classList.remove("br-green");
-  
+  errorName.innerHTML="Name is not valid!";
+  errorName.style.color="red";
  }
 }
 
@@ -74,49 +78,21 @@ function checkName() {
 formEmail.addEventListener("blur", checkEmail);
 function checkEmail() {
  var check = emailRegex.test(formEmail.value);
+ var errorEmail =  document.querySelector(".errorEmail");
  if(check) {
   formEmail.classList.add("br-green");
   formEmail.classList.remove("br-red");
+  errorEmail.innerHTML="Email is valid!";
+  errorEmail.style.color="green";
   
  } 
  else {
  noErrors = false;
   formEmail.classList.add("br-red");
   formEmail.classList.remove("br-green");
-  
+  errorEmail.innerHTML="Email is not valid!";
+  errorEmail.style.color="Red";
  }
 }
 
-var tbMessage = document.getElementById("#message");
-tbMessage.addEventListener("blur", checkMessage);
-function checkMessage() {
- var numberOfSpaces = tbMessage.value.replace(/[^\s]/, "").length;
-
- if(tbMessage.value.length - numberOfSpaces < 20) {
-  noErrors = false;
-  tbMessage.classList.add("br-red");
-  tbMessage.classList.remove("br-green");
- } else {
-  tbMessage.classList.add("br-green");
-  tbMessage.classList.remove("br-red");
- }
-}
-
-
-var btnSubmitMessage = document.getElementById("#btnSubmitForm");
-btnSubmitMessage.addEventListener("click", function() {
- noErrors = true;
- checkName();
- checkEmail();
- checkMessage();
-
- if(noErrors) {
- formName.value = "";
- formName.classList.remove("br-green");
- formEmail.value = "";
- formEmail.classList.remove("br-green");
- tbMessage.value = "";
- tbMessage.classList.remove("br-green");
-}
-});
 
