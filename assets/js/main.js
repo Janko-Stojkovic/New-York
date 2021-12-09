@@ -95,4 +95,19 @@ function checkEmail() {
  }
 }
 
+var btnSubmitMessage = document.getElementById("#btnSubmitForm");
+btnSubmitMessage.addEventListener("click", function() {
+ noErrors = true;
+ checkName();
+ checkEmail();
+
+
+ if(noErrors) {
+ formName.value = "";
+ formName.classList.remove("br-green");
+ formEmail.value = "";
+ formEmail.classList.remove("br-green");
+
+}
+});
 
