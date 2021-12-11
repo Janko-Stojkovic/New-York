@@ -119,9 +119,9 @@
 
                         <div class="col-lg-6 col-12">
                             <div class="portfolio-thumb mb-5" data-aos="fade-up">
-                                <a href="assets/images/Times-Square.jpg" class="image-popup">
-                                    <img src="assets/images/Times-Square.jpg" class="img-fluid portfolio-image" alt="Times Square">
-                                </a>
+                                
+                                    <img src="assets/images/Times-Square.jpg" id="img" class="img img-fluid portfolio-image" alt="Times Square">
+                  
 
                                 <div class="portfolio-info">                     
                                     <h4 class="portfolio-title mb-0">Times Square</h4>
@@ -131,9 +131,9 @@
                             </div> 
 
                             <div class="portfolio-thumb" data-aos="fade-up">
-                                <a href="assets/images/Liberty.jpg" class="image-popup">
-                                    <img src="assets/images/Liberty.jpg" class="img-fluid portfolio-image" alt="Statue Of Liberty">
-                                </a>
+                            
+                                    <img src="assets/images/Liberty.jpg" id="img" class="img img-fluid portfolio-image" alt="Statue Of Liberty">
+                          
 
                                 <div class="portfolio-info">                     
                                     <h4 class="portfolio-title mb-0">Statue Of Liberty</h4>
@@ -145,9 +145,9 @@
 
                         <div class="col-lg-6 col-12">
                             <div class="portfolio-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                                <a href="assets/images/ESB.jpg" class="image-popup">
-                                    <img src="assets/images/ESB.jpg" class="img-fluid portfolio-image" alt="Empire State Building">
-                                </a>
+                               
+                                    <img src="assets/images/ESB.jpg" id="img" class="img img-fluid portfolio-image" alt="Empire State Building">
+                               
 
                                 <div class="portfolio-info">                     
                                     <h4 class="portfolio-title mb-0">Empire State Building</h4>
@@ -157,18 +157,22 @@
                             </div> 
 
                             <div class="portfolio-thumb" data-aos="fade-up">
-                                <a href="assets/images/Brooklyn-Bridge.jpg" class="image-popup">
-                                    <img src="assets/images/Brooklyn-Bridge.jpg" class="img-fluid portfolio-image" alt="Brooklyn Bridge">
-                                </a>
-
+                                    <img src="assets/images/Brooklyn-Bridge.jpg" id="img" class="img img-fluid portfolio-image" alt="Brooklyn Bridge">
+                                
+                                    
                                 <div class="portfolio-info">                     
                                     <h4 class="portfolio-title mb-0">Brooklyn Bridge</h4>
 
                            
                                 </div>
+                                
                             </div> 
                         </div>
-
+                        <div class="imgmodal" id="imgmodal">
+                            <img id="modalImg" alt="">
+                            <h4 id="modalTxt" class="portfolio-title mb-0"></h4>
+                        </div>
+                        <div id="overlay"></div>
                     </div>
                 </div>
             </section>
@@ -181,7 +185,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Times Square</h5>
                               <p class="card-text">Times Square is a major commercial intersection, tourist destination, at the junction of Broadway and Seventh Avenue.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -189,7 +193,7 @@
                             <div class="card-body">
                               <h5 class="card-title">The Oculus</h5>
                               <p class="card-text">The Oculus is the world’s most expensive train station, serving 12 subway lines and the PATH train, with a beautiful mall inside of it.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -197,7 +201,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Central Park</h5>
                               <p class="card-text">Central Park is an urban park in New York City located between the Upper West and Upper East Sides of Manhattan.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -205,7 +209,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Empire State</h5>
                               <p class="card-text">Empire State Building is skyscraper rising 102 stories that was completed  in 1931 and was the tallest building in the world until 1971.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                     </div>
@@ -215,7 +219,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Brooklyn Bridge</h5>
                               <p class="card-text">The Brooklyn Bridge is a bridge in New York City, spanning the East River between the boroughs of Manhattan and Brooklyn.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -223,7 +227,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Statue Of Liberty</h5>
                               <p class="card-text">The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -231,7 +235,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Rockfeller Center</h5>
                               <p class="card-text">Rockefeller Center is a large complex consisting of 19 commercial buildings between 48th Street and 51st Street in Midtown Manhattan.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                              <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -239,7 +243,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Wall Street</h5>
                               <p class="card-text">Wall Street is an eight-block-long street in the Financial District of Lower Manhattan. It runs between Broadway and the East River.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                     </div>
@@ -249,7 +253,7 @@
                             <div class="card-body">
                               <h5 class="card-title">NYPL</h5>
                               <p class="card-text">The New York Public Library (NYPL) is a public library system in New York City. It is the second largest public library in the United States</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -257,7 +261,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Coney Island</h5>
                               <p class="card-text">Coney Island is an entertainment area in the southwestern section of the New York City borough of Brooklyn.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -265,7 +269,7 @@
                             <div class="card-body">
                               <h5 class="card-title">MSG</h5>
                               <p class="card-text">Madison Square Garden, colloquially known as The Garden or by its initials MSG, is a multi-purpose indoor arena in New York City.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>
                         <div class="card " >
@@ -273,11 +277,25 @@
                             <div class="card-body">
                               <h5 class="card-title">9/11 memorial</h5>
                               <p class="card-text">The National 9/11 Memorial & Museum is commemorating the September 11, 2001 attacks, which killed 2,977 people.</p>
-                              <a href="" class="btn btn-primary">View more...</a>
+                             <button id="open" class="btn btn-primary open" data-modal-target="#modal">View more...</button>
                             </div>
                         </div>  
                     </div>
-                </div>
+                    
+                    <div class="modal" id="modal">
+                      <div class="modal-header">
+                        <div class="title"></div>
+                        <button data-close-button class="close-button">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="modal-txt"></p>
+                        <button data-close-button class="close-button inner-close">Close</button>
+                      </div>
+                    </div>
+                    <div id="overlay">
+                        
+                    </div>
+                </div>  
             </section>
 
             <section class=" contact section-padding" id="contact">
@@ -384,15 +402,13 @@
 
                     <div class="col-lg-3 col-5 ms-auto">
                         <ul class="social-icon">
-                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+                            <li><a href="https://www.facebook.com/" class="social-icon-link bi-facebook"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+                            <li><a href="https://twitter.com/" class="social-icon-link bi-twitter"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="https://www.instagram.com/" class="social-icon-link bi-instagram"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
-
-                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="https://www.youtube.com/" class="social-icon-link bi-youtube"></a></li>
                         </ul>
                     </div>
 
