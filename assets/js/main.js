@@ -327,43 +327,30 @@ close_author.addEventListener('click',() =>{
   overlay.classList.remove('active')
 })
 
+$('.someBlock').preloader({
 
+  // loading text
+  text: 'asdasdasdasd', 
 
-/*$(document).ready(function(){
-    $('.next').on('click', function(){
-        var currentImage = $('.active');
-        var nextImage = currentImage.next();
-        if(nextImage.length){
-            currentImage.removeClass('active');
-            nextImage.addClass('active');
-        }
-        else{
-            $('.image:last-child').removeClass('active');
-            $('.image:first-child').addClass('active');
-        }
-    })
-    $('.prev').on('click', function(){
-        var currentImage = $('.active');
-        var prevImage = currentImage.prev();
-        if(prevImage.length){
-            currentImage.removeClass('active');
-            prevImage.addClass('active');
-        }
-        else{
-            $('.image:first-child').removeClass('active');
-            $('.image:last-child').addClass('active');
-        }
-    })
-})
-setInterval(function(){
-  var currentImage = $('.active');
-  var nextImage = currentImage.next();
-  if(nextImage.length){
-      currentImage.removeClass('active');
-      nextImage.addClass('active');
-  }
-  else{
-      $('.image:last-child').removeClass('active');
-      $('.image:first-child').addClass('active');
-  }
-}, 2000)*/
+  // from 0 to 100 
+  percent: '100', 
+
+  // duration in ms
+  duration: '2000', 
+
+  // z-index property
+  zIndex: '100', 
+
+  // sets relative position to preloader's parent
+  setRelative: false 
+  
+});
+// remove the loading indicator
+$('.someBlock').preloader('remove')
+
+// up<a href="https://www.jqueryscript.net/time-clock/">date</a> the loading indicator
+$('.someBlock').preloader('update', {
+  percent: '70',
+  text: 'example',
+  // more options here
+});
