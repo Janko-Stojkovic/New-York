@@ -12,6 +12,8 @@
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -82,11 +84,11 @@
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
-                          
                         </ul>
                     </div>
                 </div>
             </nav>
+        
 
             <section class="section-padding pb-0" id="about">
                 <div class="container mb-5 pb-lg-5">
@@ -104,11 +106,27 @@
                         </div>
 
                     </div>
-                </div>
-
-               
+                </div>           
             </section>
-
+           <!-- <section class="sectiong-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-outer">
+                            <img src="assets/images/arrow-left.png" class="prev" alt="arrow-left"/>
+                            <div class="slider-inner">
+                                <img src="assets/images/item1.jpg" class="active image" alt=""/>
+                                <img src="assets/images/item2.jpg" class="image" alt=""/>
+                                <img src="assets/images/item3.jpg" class="image" alt=""/>
+                                <img src="assets/images/item4.jpg" class="image" alt=""/>
+                                <img src="assets/images/item5.jpg" class="image" alt=""/>
+                                <img src="assets/images/item6.jpg" class="image" alt=""/>
+                                <img src="assets/images/item7.jpg" class="image" alt=""/>
+                            </div>
+                            <img src="assets/images/arrow - right.png" class="next" alt="arrow-right"/>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
             <section class="section-padding" id="portfolio">
                 <div class="container">
                     <div class="row">
@@ -325,42 +343,21 @@
                                         
                                         <div class="errorEmail"></div>
                                     </div>
+                                    <div class="col-12 my-4">
+                                        <label for="number" class="form-label">Number <sup class="text-danger">*</sup></label>
 
+                                        <input type="text" name="number" id="number" class="form-control" placeholder="Example:060/xxxx-xxx">
+                                        
+                                        <div class="errorNumber"></div>
+                                    </div>
                                     <div class="col-12 my-4">
                                         <label for="message" class="form-label">How can we help?</label>
 
                                         <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tell us something more about NYC" ></textarea>
                                         <div class="errorMsg"></div>
                                     </div>
-
-                                    <div class="col-12">
-                                        <label for="services" class="form-label">Services<sup class="text-danger">*</sup></label>
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="checkbox1" name="checkbox1" class="form-check-input">
-
-                                            <label class="form-check-label" for="checkbox1">Branding</label>
-                                          </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-12 my-2 my-lg-0">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="checkbox2" name="checkbox2" class="form-check-input">
-
-                                            <label class="form-check-label" for="checkbox2">Digital Experiences</label>
-                                          </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="checkbox3" name="checkbox3" class="form-check-input">
-
-                                            <label class="form-check-label" for="checkbox3">Web Development</label>
-                                          </div>
-                                    </div>
-                                </div>
+                                    
+                                    
 
                                 <div class="col-lg-5 col-12 mx-auto mt-5 bt">
                                     
@@ -409,9 +406,33 @@
                             <li><a href="https://www.instagram.com/" class="social-icon-link bi-instagram"></a></li>
 
                             <li><a href="https://www.youtube.com/" class="social-icon-link bi-youtube"></a></li>
+                            
+                            <li><button id="open-author" class="btn btn-primary">Author</button></li>
                         </ul>
                     </div>
-
+                    <div class="modal-author" id="modal-author">
+                        <div class="container">
+                            <div class="row">
+                                <div class="left">
+                                    <img src="assets/images/ja.JPG" alt="My picture"/>
+                                </div>
+                                <div class="right">
+                                    <div class="right-title">
+                                        <h4 class="card-title">Author</h4>
+                                    </div>
+                                    <div class="right-body">
+                                        <p>Hi! My name is Janko Stojkovic (96/20). I went to the first technical school in Kragujevac. My desire for programming came in my first year of high school when I actually first came in contact with c and c #. A year later I was introduced to web programming and web design. I learned HTML, CSS and JAVASCRIPT, I am also familiar with PHP.
+                                            In the meantime a friend told me about ICT college, so I decided it was the best decision I could make. With a high school diploma, I came to Belgrade to continue my education and expand my knowledge of web development. I am a freshman at the moment and I hope that everything will go well.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row buttons">
+                                <a href="https://janko-stojkovic.github.io/Portfolio/" target="_blank" class="author-button portfolio">Portfolio</a>
+                                <button  class="author-button" id="close">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
                 </div>
             </section>
         </footer>
@@ -422,22 +443,7 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="assets/js/main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script>
-         $('button').click(function(){
-           $('.alert').addClass("show");
-           $('.alert').removeClass("hide");
-           $('.alert').addClass("showAlert");
-           setTimeout(function(){
-             $('.alert').removeClass("show");
-             $('.alert').addClass("hide");
-           },5000);
-         });
-         $('.close-btn').click(function(){
-           $('.alert').removeClass("show");
-           $('.alert').addClass("hide");
-         });
-      </script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    
     </body>
 </html>

@@ -51,8 +51,12 @@ navBar.innerHTML = navList;
 
 var nameRegex = /^[A-ZŠĐČĆŽ][a-zšđčćž]{2,}(\s[A-ZŠĐČĆŽ][a-zšđčćž]{2,})+$/;
 var emailRegex = /^[\w-_\.]+@([\w-_]{2,}\.)+[a-z]{2,}$/;
+var numRegex = /^06[0-9]\/[0-9]{4}\-[0-9]{3,4}$/;
+var messageRegex = /.{4,200}/;
 var formName = document.getElementById("name");
 var formEmail = document.getElementById("email");
+var formNumber = document.getElementById("number");
+var formMsg = document.getElementById("message");
 var noErrors;
 formName.addEventListener("blur", checkName);
 function checkName() {
@@ -95,19 +99,66 @@ function checkEmail() {
  }
 }
 
+formNumber.addEventListener("blur", checkNumber);
+function checkNumber() {
+  var check = numRegex.test(formNumber.value);
+  var errorNumber =  document.querySelector(".errorNumber");
+  if(check) {
+    formNumber.classList.add("br-green");
+    formNumber.classList.remove("br-red");
+    errorNumber.innerHTML="Number is valid!";
+    errorNumber.style.color="green";
+ 
+ } 
+ else {
+  noErrors = false;
+  formNumber.classList.add("br-red");
+  formNumber.classList.remove("br-green");
+  errorNumber.innerHTML="Number is not valid!";
+  errorNumber.style.color="red";
+ }
+}
+
+formMsg.addEventListener("blur", checkMsg);
+function checkMsg() {
+  var errorMsg =  document.querySelector(".errorMsg");
+ if (formMsg.value == "") {
+  formMsg.classList.add('br-red');
+  formMsg.classList.remove('br-green');
+
+
+  errorMsg.textContent = "Message can`t be empty";
+  errorMsg.style.color="red";
+ } else {
+  formMsg.classList.remove('br-red');
+  formMsg.classList.add('br-green');
+  errorMsg.textContent = "Message is valid";
+  errorMsg.style.color="green";
+ }
+
+}
+
 var btnSubmitMessage = document.getElementById("btnSubmitForm");
+
 btnSubmitMessage.addEventListener("click", function() {
  noErrors = true;
  checkName();
  checkEmail();
-
-
+ checkNumber();
+ checkMsg();
  if(noErrors) {
- formName.value = "";
- formName.classList.remove("br-green");
- formEmail.value = "";
- formEmail.classList.remove("br-green");
-
+  formName.value = "";
+  formNumber.value = "";
+  formEmail.value = "";
+  formMsg.value = "";
+  errorName.innerHTML="";
+  errorEmail.innerHTML='';
+  errorNumber.innerHTML='';
+  errorMsg.innerHTML='';
+  formEmail.classList.remove("br-green");
+  formName.classList.remove("br-green");
+  formNumber.classList.remove("br-green");
+  formMsg.classList.remove("br-green");
 }
 });
 
@@ -260,3 +311,59 @@ function openImgModal(modal) {
   modal.classList.add('active')
   overlay.classList.add('active')
 };
+
+
+const open_author = document.getElementById('open-author');
+const modal_author = document.getElementById('modal-author');
+const close_author = document.getElementById('close');
+
+open_author.addEventListener('click',() => {
+  modal_author.classList.add('active')
+  overlay.classList.add('active')
+});
+
+close_author.addEventListener('click',() =>{
+  modal_author.classList.remove('active')
+  overlay.classList.remove('active')
+})
+
+
+
+/*$(document).ready(function(){
+    $('.next').on('click', function(){
+        var currentImage = $('.active');
+        var nextImage = currentImage.next();
+        if(nextImage.length){
+            currentImage.removeClass('active');
+            nextImage.addClass('active');
+        }
+        else{
+            $('.image:last-child').removeClass('active');
+            $('.image:first-child').addClass('active');
+        }
+    })
+    $('.prev').on('click', function(){
+        var currentImage = $('.active');
+        var prevImage = currentImage.prev();
+        if(prevImage.length){
+            currentImage.removeClass('active');
+            prevImage.addClass('active');
+        }
+        else{
+            $('.image:first-child').removeClass('active');
+            $('.image:last-child').addClass('active');
+        }
+    })
+})
+setInterval(function(){
+  var currentImage = $('.active');
+  var nextImage = currentImage.next();
+  if(nextImage.length){
+      currentImage.removeClass('active');
+      nextImage.addClass('active');
+  }
+  else{
+      $('.image:last-child').removeClass('active');
+      $('.image:first-child').addClass('active');
+  }
+}, 2000)*/
