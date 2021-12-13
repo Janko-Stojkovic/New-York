@@ -646,7 +646,7 @@ strong {
 
 .card{
   background-color: var(--dark-color);
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   padding-top: 10px;
   transition: .3s;
   border-radius: 7px;
@@ -987,6 +987,7 @@ strong {
   .modal-author .left{
     width: 40%;
   }
+  
 }
 @media screen and (max-width: 1200px) {
   .card{
