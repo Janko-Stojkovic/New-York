@@ -286,7 +286,7 @@ var modalImg = document.getElementById('modalImg');
 var modalTxt = document.getElementById('modalTxt');
 var txt = ['Times Square', 'Statue Of Liberty', 'Empire State Building', 'Brooklyn Bridge'];
 var modalImgLink = ['assets/images/Times-Square.jpg', 'assets/images/Liberty.jpg', 'assets/images/ESB.jpg', 'assets/images/Brooklyn-Bridge.jpg']
-var modalImgWidth = ['100%', '50%', '50%', '100%']
+var modalImgWidth = ['80%', '40%', '40%', '80%']
 
 for( let i=0;i<txt.length;i++){
   openModalButton[i].addEventListener('click', () => {
@@ -326,31 +326,36 @@ close_author.addEventListener('click',() =>{
   modal_author.classList.remove('active')
   overlay.classList.remove('active')
 })
+$(document).ready(function() {
+  $('#txt-more').hide();
+  $('#show').click(function(){
+    $('#txt-more').slideToggle('fast');
+  });
+  $('.card').hover(
+    function(){
+      $(this).addClass('eff');
+    },
+    function(){
+      $(this).removeClass('eff');
+    }
+  )
+  /* PLUGIN */
 
-$('.someBlock').preloader({
-
-  // loading text
-  text: 'asdasdasdasd', 
-
-  // from 0 to 100 
-  percent: '100', 
-
-  // duration in ms
-  duration: '2000', 
-
-  // z-index property
-  zIndex: '100', 
-
-  // sets relative position to preloader's parent
-  setRelative: false 
-  
-});
-// remove the loading indicator
-$('.someBlock').preloader('remove')
-
-// up<a href="https://www.jqueryscript.net/time-clock/">date</a> the loading indicator
-$('.someBlock').preloader('update', {
-  percent: '70',
-  text: 'example',
-  // more options here
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
 });

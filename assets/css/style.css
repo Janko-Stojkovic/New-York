@@ -499,48 +499,15 @@ strong {
   font-family: 'Berkshire Swash', cursive;
 }
 /*---------------------------------------
-  JQUERRY SLIDER
+  JQUERRY 
 -----------------------------------------*/
-.slider-outer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#show{
+  color: var(--primary-color);
+  cursor: pointer;
 }
-.slider-inner{
-  width: 70%;
-  position: relative;
-  overflow: hidden;
-  padding: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#txt-more{
+  transition: .3s  ease-in;
 }
-.slider-inner img{
-  display: none;
-  width: 500px;
-  height: 300px;
-  
-}
-.slider-inner img.active{
-  display: inline-block;
-}
-.prev,.next{
- 
-  width: 100px;
-  height: 100px;
-}
-.prev{
-  position: relative;
-  margin-right: -45px;
-  z-index: 7;
-}
-.next{
-  position: relative;
-  margin-left: -45px;
-  z-index: 7;
-}
-
-
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
@@ -634,7 +601,6 @@ strong {
 .portfolio-info {
   margin: 20px;
 }
-
 /*---------------------------------------
   More about places in NY            
 -----------------------------------------*/
@@ -653,7 +619,7 @@ strong {
   width: 18rem;
 }
 
-.card:hover{
+.eff{
   box-shadow: 0px 0px 12px 5px rgba(143,143,143,1);
   transform: scale(1.03);
 }
